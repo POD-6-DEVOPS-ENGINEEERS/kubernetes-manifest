@@ -1,9 +1,20 @@
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: bank-config
+# data:
+#   DB_HOST: "production-mysql-db.c61seok4u931.us-east-1.rds.amazonaws.com"
+#   DB_PORT: "3306"
+#   DB_NAME: "online_banking_system"
+#   REACT_APP_API_URL: http://backend-service:8080
+
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: bank-config
 data:
-  DB_HOST: "production-mysql-db.c61seok4u931.us-east-1.rds.amazonaws.com"
+  DB_HOST: "dbc:mysql://production-mysql-db.c61seok4u931.us-east-1.rds.amazonaws.com:3306/production-mysql-db?createDatabaseIfNotExist=true&useUnicode=true" 
   DB_PORT: "3306"
-  DB_NAME: "online_banking_system"
-  REACT_APP_API_URL: http://backend-service:8080
+  DB_NAME: "admin"
+  REACT_APP_API_URL: https://chichi13.online

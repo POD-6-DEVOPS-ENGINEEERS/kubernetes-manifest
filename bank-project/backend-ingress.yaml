@@ -11,11 +11,11 @@ spec:
   ingressClassName: external-nginx
   tls:
   - hosts:
-    - bankapi.teamcloudup.online  # bankend url
-    - bank.teamcloudup.online     # frontend url
-    secretName: bank-teamcloudup-online
+    - api.chichi13.online  # backend url
+    - app.chichi13.online     # frontend url
+    secretName: bank-chichi13-online
   rules:
-  - host: bank.teamcloudup.online
+  - host: bank.chichi13.online
     http:
       paths:
       - path: /
@@ -25,7 +25,7 @@ spec:
             name: bank-frontend-service
             port:
               number: 3000
-  - host: bankapi.teamcloudup.online
+  - host: api.chichi13.online
     http:
       paths:
       - path: /
