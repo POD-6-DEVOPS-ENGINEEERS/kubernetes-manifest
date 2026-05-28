@@ -14,7 +14,7 @@ kind: ConfigMap
 metadata:
   name: bank-config
 data:
-  DB_HOST: "dbc:mysql://production-mysql-db.c61seok4u931.us-east-1.rds.amazonaws.com:3306/production-mysql-db?createDatabaseIfNotExist=true&useUnicode=true" 
+  DB_HOST: "production-mysql-db.cdag6g40ey1v.eu-north-1.rds.amazonaws.com"
   DB_PORT: "3306"
   DB_NAME: "admin"
   REACT_APP_API_URL: https://chichi13.online
