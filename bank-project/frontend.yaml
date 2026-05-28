@@ -30,7 +30,7 @@ kind: Deployment
 metadata:
   name: frontend-banking-deployment
 spec:
-  replicas: 1 
+  replicas: 1
   selector:
     matchLabels:
       app: frontend-banking-deployment
@@ -40,14 +40,13 @@ spec:
         app: frontend-banking-deployment
     spec:
       containers:
-      - name: frontend-banking-container
-        image: 255694842918.dkr.ecr.eu-north-1.amazonaws.com
-        ports:
-        - containerPort: 3000
-        env:
-        - name: REACT_APP_API_URL
-          valueFrom:
-            configMapKeyRef:
-              name: bank-config
-              key: REACT_APP_API_URL
-
+        - name: frontend-banking-container
+          image: 255694842918.dkr.ecr.eu-north-1.amazonaws.com/bank-frontend:21
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_API_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bank-config
+                  key: REACT_APP_API_URL
